@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mert Kebap | Authentischer Grill & Imbiss in Köln</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+
+        .hero-slogan { font-family: 'Playfair Display', serif; font-style: italic; }
+
+        .hero-section {
+            isolation: isolate;
+            position: relative;
+        }
+
+        .hero-section::before {
+            background-image: linear-gradient(to bottom, rgba(250, 250, 249, 0.55), rgba(250, 250, 249, 0.78)), url("Bilder/image.png");
+            background-position: center 55%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            content: "";
+            inset: 0;
+            pointer-events: none;
+            position: absolute;
+            z-index: -1;
+        }
+
+        .site-nav a[aria-current="page"] {
+            color: #b91c1c;
+            font-weight: 600;
+        }
+        
+        /* Punktierte Führungslinie wie im Dokument */
+        .dotted-leader {
+            flex-grow: 1;
+            border-bottom: 2px dotted #d6d3d1;
+            margin: 0 12px;
+            margin-bottom: 6px;
+        }
+
+        .menu-item .dotted-leader + span {
+            color: #b91c1c;
+        }
+
+        /* SVG Icon styling */
+        .category-tab {
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+            color: #44403c;
+        }
+        .category-tab.active {
+            color: #b91c1c;
+        }
+        .category-tab.active .icon-box {
+            border-bottom: 3px solid #b91c1c;
+            padding-bottom: 4px;
+        }
+
+        @media (max-width: 639px) {
+            #categoryNav {
+                justify-content: space-between;
+                gap: 0.25rem;
+                overflow-x: visible;
+            }
+
+            #categoryNav .category-tab {
+                flex: 1 1 0%;
+                min-width: 0;
+            }
+
+            #categoryNav .icon-box {
+                margin-bottom: 0.25rem;
+            }
+
+            #categoryNav .icon-box > svg {
+                width: 2rem;
+                height: 2rem;
+            }
+
+            #categoryNav .category-tab > span {
+                font-size: 0.65rem;
+                line-height: 1.1;
+                white-space: nowrap;
+            }
+
+            #menuContent .menu-category > .flex.items-center.justify-center {
+                margin-block: 1.25rem;
+            }
+
+            #menuContent .menu-category > .flex.items-center.justify-center .text-2xl {
+                font-size: 1.125rem;
+                line-height: 1.25;
+            }
+
+            #menuContent .menu-category h3 {
+                margin-bottom: 0.75rem;
+                font-size: 0.875rem;
+            }
+
+            #menuContent .menu-item .font-bold {
+                font-size: 0.875rem;
+            }
+
+            #menuContent .menu-item p.text-sm {
+                font-size: 0.75rem;
+                line-height: 1.35;
+            }
+
+            #menuContent .menu-item p.text-xs {
+                font-size: 0.675rem;
+                line-height: 1.35;
+            }
+
+            #menuContent .menu-category > p.text-center {
+                margin-bottom: 1rem;
+                font-size: 0.75rem;
+            }
+
+            #menuContent .space-y-6 > :not(:first-child) {
+                margin-top: 1rem;
+            }
+
+            #menuContent .space-y-5 > :not(:first-child) {
+                margin-top: 0.875rem;
+            }
+        }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-800 antialiased">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-stone-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between gap-2">
+            <a href="#" class="shrink-0" aria-label="Mert Kebap Startseite">
+                <img src="Bilder/WhatsApp%20Image%202026-09-01%20at%2018.37.10%20(1).jpeg" alt="Mert Kebap" class="h-auto w-24 sm:w-36 lg:w-40">
+            </a>
+            <nav class="site-nav hidden items-center gap-8 text-sm font-medium text-stone-600 md:flex">
+                <a href="#menu" data-nav-key="menu" aria-current="page" class="transition">Speisekarte</a>
+                <a href="about.html" data-nav-key="about" class="transition">Über uns</a>
+                <a href="#impressum" data-nav-key="impressum" data-impressum-toggle aria-controls="impressum" aria-expanded="false" class="transition hover:text-red-700">Impressum</a>
+            </nav>
+            <a href="tel:01711268133" class="shrink-0 bg-red-700 px-3 py-2.5 text-xs font-medium text-white transition hover:bg-red-800 sm:px-5 sm:text-sm rounded-full shadow-sm">
+                📞 0171 1268133
+            </a>
+        </div>
+        <nav class="site-nav flex items-center justify-center gap-3 border-t border-stone-100 px-4 py-2 text-xs font-medium text-stone-600 sm:gap-6 md:hidden" aria-label="Mobile Navigation">
+            <a href="#menu" data-nav-key="menu" aria-current="page">Speisekarte</a>
+            <a href="about.html" data-nav-key="about">Über uns</a>
+            <a href="#impressum" data-nav-key="impressum" data-impressum-toggle aria-controls="impressum" aria-expanded="false" class="hover:text-red-700">Impressum</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section border-b border-stone-200 px-6 pt-16 pb-6 text-center">
+        <div class="mx-auto max-w-4xl">
+
+        <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-stone-900 mb-4">
+            Willkommen
+        </h1>
+        <div class="mb-4 flex flex-wrap justify-center gap-2">
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=Mert+Kebap%2C+Robert-Perthel-Stra%C3%9Fe+71-73%2C+50739+K%C3%B6ln" target="_blank" rel="noopener noreferrer" aria-label="Mert Kebap in Google Maps öffnen" class="inline-flex items-center gap-1.5 rounded-md border border-stone-200 bg-white px-2 py-1.5 text-[10px] font-semibold text-stone-700 transition hover:border-red-200 hover:text-red-700 sm:px-2.5 sm:text-[11px]">
+                <svg aria-hidden="true" viewBox="0 0 24 24" class="h-4 w-4">
+                    <path d="M12 22s8-7.2 8-13a8 8 0 1 0-16 0c0 5.8 8 13 8 13Z" fill="#34a853"/>
+                    <path d="M4 9a8 8 0 0 1 13.6-5.7L12 10z" fill="#4285f4"/>
+                    <path d="M17.6 3.3A8 8 0 0 1 20 9c0 3-2 6-4 8l-4-7z" fill="#fbbc04"/>
+                    <path d="M4 9a8 8 0 0 1 1-3l7 5-5 7c-2-2-3-6-3-9z" fill="#34a853"/>
+                    <circle cx="12" cy="9" r="2.4" fill="white"/>
+                </svg>
+                <span>Google Maps</span>
+            </a>
+            <a href="https://instagram.com/mertkebapkoeln" target="_blank" rel="noopener noreferrer" aria-label="Instagram von Mert Kebap öffnen" class="inline-flex items-center gap-1.5 rounded-md border border-stone-200 bg-white px-2 py-1.5 text-[10px] font-semibold text-stone-700 transition hover:border-red-200 hover:text-red-700 sm:px-2.5 sm:text-[11px]">
+                <svg aria-hidden="true" viewBox="0 0 24 24" class="h-4 w-4">
+                    <defs>
+                        <linearGradient id="instagramGradient" x1="3" y1="21" x2="21" y2="3" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#feda75"/><stop offset="0.5" stop-color="#d62976"/><stop offset="1" stop-color="#4f5bd5"/>
+                        </linearGradient>
+                    </defs>
+                    <rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="url(#instagramGradient)"/>
+                    <circle cx="12" cy="12" r="4.3" fill="none" stroke="white" stroke-width="1.8"/>
+                    <circle cx="17.7" cy="6.6" r="1.2" fill="white"/>
+                </svg>
+                <span>Instagram</span>
+            </a>
+        </div>
+        <p class="hero-slogan mb-8 text-xl font-normal leading-tight text-red-700">
+            Lasst es euch schmecken!
+        </p>
+        <div id="contact" class="max-w-3xl mx-auto overflow-hidden rounded-lg border border-stone-200 bg-white text-left shadow-sm">
+            <div class="grid md:grid-cols-2 md:divide-x md:divide-stone-200">
+                <div class="flex items-start gap-2.5 p-2.5 sm:gap-3 sm:p-3.5">
+                    <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-red-50 text-red-700 sm:h-8 sm:w-8">
+                        <svg aria-hidden="true" viewBox="0 0 24 24" class="h-3.5 w-3.5 sm:h-4 sm:w-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+                    </span>
+                    <div>
+                        <p class="mb-0.5 text-[10px] font-semibold uppercase tracking-wider text-stone-500">Adresse</p>
+                        <address class="not-italic text-xs font-semibold leading-relaxed text-stone-900 sm:text-[13px]">Robert-Perthel-Straße 71-73<br>50739 Köln</address>
+                    </div>
+                </div>
+                <div class="flex items-start gap-2.5 border-t border-stone-200 p-2.5 sm:gap-3 sm:p-3.5 md:border-t-0">
+                    <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-red-50 text-red-700 sm:h-8 sm:w-8">
+                        <svg aria-hidden="true" viewBox="0 0 24 24" class="h-3.5 w-3.5 sm:h-4 sm:w-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+                    </span>
+                    <div>
+                        <p class="mb-0.5 text-[10px] font-semibold uppercase tracking-wider text-stone-500">Öffnungszeiten</p>
+                        <p class="text-xs font-semibold leading-relaxed text-stone-900 sm:text-[13px]">Mo – Sa <span class="font-normal text-stone-600">11:00 – 22:00 Uhr</span></p>
+                        <p class="text-xs text-stone-600 sm:text-[13px]">Sonntag geschlossen</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- SPEISEKARTE (Interaktiv & Dynamisch) -->
+    <section id="menu" class="pt-8 pb-10 px-4 max-w-5xl mx-auto">
+        
+        <!-- DYNAMISCHE KATEGORIE-NAVIGATION (Mit Icons aus der Vorlage) -->
+        <div id="categoryNav" class="flex justify-center items-center gap-6 md:gap-10 pb-8 mb-12 border-b border-stone-200 overflow-x-auto" role="tablist" aria-label="Speisekarten-Kategorien">
+            
+            <button type="button" id="tab-teller" class="category-tab active flex flex-col items-center min-w-[70px]">
+                <div class="icon-box mb-2">
+                    <svg class="w-12 h-12" viewBox="0 0 64 64" aria-hidden="true">
+                        <circle cx="32" cy="33" r="21" fill="#d7f1ff" stroke="#111" stroke-width="3"/>
+                        <circle cx="32" cy="33" r="14" fill="#effbff" stroke="#111" stroke-width="2.5"/>
+                        <path d="M7 8v11a5 5 0 0 0 10 0V8m-5 17v30M12 8v11" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+                        <path d="M55 8c-7 6-10 14-10 23h10z" fill="#f5f7fa" stroke="#111" stroke-linejoin="round" stroke-width="3"/>
+                        <path d="M50 32v23" stroke="#111" stroke-linecap="round" stroke-width="8"/>
+                        <path d="M50 34v20" stroke="#66b8c5" stroke-linecap="round" stroke-width="4"/>
+                        <path d="M12 43v12" stroke="#66b8c5" stroke-linecap="round" stroke-width="4"/>
+                    </svg>
+                </div>
+                <span class="text-sm font-semibold">Teller</span>
+            </button>
+
+            <button type="button" id="tab-sandwich" class="category-tab flex flex-col items-center min-w-[70px]">
+                <div class="icon-box mb-2">
+                    <svg class="w-12 h-12" viewBox="0 0 64 64" aria-hidden="true">
+                        <path d="M5 31c0-10 8-17 19-17h17c11 0 18 7 18 17s-7 17-18 17H24C13 48 5 41 5 31z" fill="#ed994d" stroke="#713b1e" stroke-width="3"/>
+                        <path d="M8 27c2-7 8-11 16-11h17c8 0 13 4 15 11z" fill="#ffbd70"/>
+                        <path d="M9 29h46v5H9z" fill="#ffdc79"/>
+                        <path d="M9 34h46c-2 5-6 6-10 3-4 5-9 5-13 0-4 5-9 5-13 1-4 3-7 2-10-1z" fill="#b6dd63" stroke="#713b1e" stroke-linejoin="round" stroke-width="2"/>
+                        <circle cx="24" cy="35" r="3" fill="#d94e4e"/><circle cx="40" cy="35" r="3" fill="#d94e4e"/>
+                        <path d="M9 41h46c-2 5-7 7-13 7H22c-6 0-11-2-13-7" fill="#e9a653"/>
+                        <path d="M18 19h1m12-2h1m11 3h1" stroke="#713b1e" stroke-linecap="round" stroke-width="2"/>
+                    </svg>
+                </div>
+                <span class="text-sm font-semibold">Sandwich</span>
+            </button>
+
+            <button type="button" id="tab-wrap" class="category-tab flex flex-col items-center min-w-[70px]">
+                <div class="icon-box mb-2">
+                    <svg class="w-12 h-12" viewBox="0 0 64 64" aria-hidden="true">
+                        <path d="M17 18 41 9q8-2 10 6l-1 7-7 31q-1 6-7 6H26q-7 0-8-7l-6-26q-2-6 5-8" fill="#ffe9bd" stroke="#713b1e" stroke-linejoin="round" stroke-width="3"/>
+                        <path d="M16 18q4-9 13-8l18 5q7 2 5 7-2 5-10 5l-18-4q-9-1-8-5" fill="#f3d69f" stroke="#713b1e" stroke-width="2.5"/>
+                        <path d="M19 18q5-7 10-3 4-4 9-1l8 4q-5 4-11 3-8 1-16-3" fill="#7b9d3c"/>
+                        <circle cx="28" cy="17" r="3.5" fill="#ed4444" stroke="#713b1e" stroke-width="1.5"/>
+                        <path d="M23 27q7 8 5 28m14-27-6 27" fill="none" stroke="#d0a66d" stroke-linecap="round" stroke-width="2.5"/>
+                    </svg>
+                </div>
+                <span class="text-sm font-semibold">Wrap</span>
+            </button>
+
+            <button type="button" id="tab-teig" class="category-tab flex flex-col items-center min-w-[70px]">
+                <div class="icon-box mb-2">
+                    <svg class="w-12 h-12" viewBox="0 0 64 64" aria-hidden="true">
+                        <path d="m7 57 16-43q3-7 10-3 17 8 26 31 3 7-4 10z" fill="#ffc44c" stroke="#713b1e" stroke-linejoin="round" stroke-width="3"/>
+                        <path d="M23 14q3-7 10-3 17 8 26 31" fill="none" stroke="#db8b50" stroke-linecap="round" stroke-width="8"/>
+                        <circle cx="31" cy="25" r="4" fill="#e74745" stroke="#713b1e" stroke-width="1.5"/>
+                        <circle cx="44" cy="39" r="4.5" fill="#e74745" stroke="#713b1e" stroke-width="1.5"/>
+                        <circle cx="23" cy="45" r="3.5" fill="#92c840" stroke="#713b1e" stroke-width="1.5"/>
+                        <path d="M15 45 24 21" stroke="#ffe77a" stroke-linecap="round" stroke-width="3"/>
+                    </svg>
+                </div>
+                <span class="text-sm font-semibold">Teig</span>
+            </button>
+
+            <button type="button" id="tab-extras" class="category-tab flex flex-col items-center min-w-[70px]">
+                <div class="icon-box mb-2">
+                    <svg class="w-12 h-12" viewBox="0 0 64 64" aria-hidden="true">
+                        <path d="M8 30h48c-2 15-11 23-24 23S10 45 8 30" fill="#ffdab3" stroke="#713b1e" stroke-linejoin="round" stroke-width="3"/>
+                        <ellipse cx="32" cy="30" rx="24" ry="8" fill="#ff9144" stroke="#713b1e" stroke-width="3"/>
+                        <path d="M43 26q-2-6 3-8 5-1 5 4l7-11" fill="#ffe0bb" stroke="#713b1e" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+                        <path d="M18 53h28l4 6H14z" fill="#efc59e" stroke="#713b1e" stroke-width="2"/>
+                    </svg>
+                </div>
+                <span class="text-sm font-semibold">Extras</span>
+            </button>
+
+            <button type="button" id="tab-drinks" class="category-tab flex flex-col items-center min-w-[70px]">
+                <div class="icon-box mb-2">
+                    <svg class="w-12 h-12" viewBox="0 0 64 64" aria-hidden="true">
+                        <path d="M39 7 31 23" stroke="#111" stroke-linecap="round" stroke-width="4"/>
+                        <path d="M14 24h38l-5 32q-1 4-5 4H24q-4 0-5-4z" fill="#ffdb72" stroke="#111" stroke-linejoin="round" stroke-width="3"/>
+                        <path d="M18 39h31l-2 15H22z" fill="#f49b3f"/>
+                        <path d="M14 24q19 5 38 0" fill="none" stroke="#111" stroke-width="3"/>
+                        <path d="M23 31v19" stroke="#fff4c9" stroke-linecap="round" stroke-width="3"/>
+                        <circle cx="17" cy="20" r="9" fill="#ffcf55" stroke="#111" stroke-width="2.5"/>
+                        <circle cx="17" cy="20" r="5" fill="none" stroke="#fff4c9" stroke-width="2"/>
+                        <path d="M17 15v10m-5-5h10" stroke="#fff4c9" stroke-width="1.5"/>
+                    </svg>
+                </div>
+                <span class="text-sm font-semibold">Drinks</span>
+            </button>
+        </div>
+
+        <!-- DYNAMISCHER CONTENT BEREICH -->
+        <div id="menuContent"></div>
+    </section>
+
+    <section aria-labelledby="allergen-heading" class="border-t border-stone-200 bg-white px-6 py-3">
+        <div class="mx-auto max-w-5xl">
+            <div>
+                <h3 id="allergen-heading" class="text-xs font-bold text-stone-900">Zusatzstoffe</h3>
+            </div>
+            <div class="mt-2 grid gap-3 text-[10px] leading-snug text-stone-600 md:grid-cols-2">
+                <div>
+                    <h4 class="mb-0.5 text-[11px] font-semibold text-red-700">Allergenkennzeichnung:</h4>
+                    <p>1 = Stabilisator, 2 = Emulgator, 3 = Antioxidationsmittel, 4 = Geschmacksverstärker, 5 = Konservierungsstoff, 6 = Farbstoff, 7 = Süßungsmittel, 8 = geschwärzt, 9 = geschwefelt, 10 = Rauch, 11 = koffeinhaltig</p>
+                </div>
+                <div>
+                    <h4 class="mb-0.5 text-[11px] font-semibold text-red-700">Allergene:</h4>
+                    <p>a = glutenhaltiges Getreide (Weizen), b = Krebstiere, c = Ei, d = Fisch, e = Erdnüsse, f = Sojabohnen, g = Milch (laktosehaltig), h = Schalenfrüchte/Nüsse, i = Sellerie, j = Senf, l = Schwefeloxid/ Sulfite, k = Sesamsamen, m = Lupine, n = Weichtiere</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="impressum" hidden class="border-t border-red-700 bg-stone-100 px-6 py-3 text-stone-600">
+        <div class="mx-auto max-w-5xl">
+            <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 border-b border-stone-300 pb-1">
+                <h2 class="text-[13px] font-bold text-stone-900">Impressum</h2>
+                <p class="text-[10px] text-stone-500">Angaben gemäß § 5 TMG</p>
+            </div>
+            <div class="grid gap-2 pt-2 text-[11px] leading-tight sm:grid-cols-2 sm:gap-4">
+                <div>
+                    <p><span class="font-semibold text-stone-900">Mert Kebap</span> · <br> Robert-Perthel-Straße 71-73 · 50739 Köln-Nippes <br> Deutschland</p>
+                </div>
+                <div>
+                    <p>Telefon: <a href="tel:01711268133" class="hover:text-red-700">0171 1268133</a></p>
+                    <p class="mt-0.5">E-Mail: <a href="mailto:mertkebap@outlook.com" class="hover:text-red-700">mertkebap@outlook.com</a></p>
+                </div>
+                <div>
+                    <span class="font-semibold text-stone-900">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:</span> <br> Metin Mert
+                </div >
+                <div>
+                    <span class="font-semibold text-stone-900">Haftungsausschluss:</span> <br>
+                    Die Inhalte dieser Webseite wurden mit größtmöglicher Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. 
+                </div>
+            </div>
+            <div class="mt-2 border-t border-stone-300 pt-1 text-center text-[10px] text-stone-500">
+                © 2026 Mert Kebap. Alle Rechte vorbehalten.
+            </div>
+        </div>
+    </footer>
+
+    <script src="menu-renderer.js"></script>
+    <script>
+        const navigationItems = document.querySelectorAll('.site-nav [data-nav-key]:not([data-impressum-toggle])');
+        const impressumToggleLinks = document.querySelectorAll('[data-impressum-toggle]');
+        const impressum = document.getElementById('impressum');
+        let activeNavigationKey = document.querySelector('.site-nav [data-nav-key][aria-current="page"]')?.dataset.navKey || 'menu';
+
+        function setActiveNavigation(key) {
+            activeNavigationKey = key;
+            navigationItems.forEach((item) => {
+                if (item.dataset.navKey === key) {
+                    item.setAttribute('aria-current', 'page');
+                } else {
+                    item.removeAttribute('aria-current');
+                }
+            });
+        }
+
+        navigationItems.forEach((item) => {
+            item.addEventListener('click', () => setActiveNavigation(item.dataset.navKey));
+        });
+
+        impressumToggleLinks.forEach((link) => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault();
+                const isExpanded = !impressum.hidden;
+                impressum.hidden = isExpanded;
+                impressumToggleLinks.forEach((toggleLink) => {
+                    toggleLink.setAttribute('aria-expanded', String(!isExpanded));
+                    toggleLink.removeAttribute('aria-current');
+                });
+
+                if (isExpanded) setActiveNavigation(activeNavigationKey);
+
+                if (!isExpanded) {
+                    impressum.scrollIntoView({ behavior: 'smooth', block: 'end' });
+                }
+            });
+        });
+
+    </script>
+</body>
+</html>

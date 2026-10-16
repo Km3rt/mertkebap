@@ -1,0 +1,145 @@
+{
+  "categories": [
+    {
+      "id": "teller",
+      "name": "Teller",
+      "icon": "teller",
+      "sections": [
+        {
+          "name": "Grillteller",
+          "items": [
+            { "name": "Adana Kebap", "germanName": "Lammhackfleisch", "content": ["Salat", "Pommes/ Reis/ Bulgur"], "price": "20€" },
+            { "name": "Tavuk Sis", "germanName": "Hähnchenfleisch", "content": ["Salat", "Pommes/ Reis/ Bulgur"], "price": "20€" },
+            { "name": "Köfte Tabak", "germanName": "Frikadellen", "content": ["Salat", "Pommes/ Reis/ Bulgur"], "price": "20€" },
+            { "name": "Kuzu Sis", "germanName": "Lammfleisch", "content": ["Salat", "Pommes/ Reis/ Bulgur"], "price": "20€" },
+            { "name": "Kuzu Pirzola", "germanName": "Lammkottlett (4-Stück)", "content": ["Salat", "Pommes/ Reis/ Bulgur"], "price": "20€" },
+            { "name": "Karisik Pirzola", "germanName": "Gemischter Grillteller", "content": ["Salat", "Pommes/ Reis/ Bulgur"], "price": "20€" } 
+        ]
+        },
+        {
+          "name": "Joghurt Grillteller",
+          "items": [
+            { "name": "Adana Kebap Yogurtlu", "germanName": "Lammhackfleisch mit Joghurt", "content": ["gebratenem Brot", "Tomaten-Buttersoße"], "price": "20€" },
+            { "name": "Kuzu Sis Yogurtlu", "germanName": "Lammfleisch mit Joghurt", "content": ["gebratenem Brot", "Tomaten-Buttersoße"], "price": "20€" },
+            { "name": "Tavuk Sis Yogurtlu", "germanName": "Hähnchenfleisch mit Joghurt", "content": ["gebratenem Brot", "Tomaten-Buttersoße"], "price": "20€" },
+            { "name": "Beyti Sarma", "germanName": "Hackfleisch im dünnem Teig (geschnitten)", "content": ["Joghurt", "Tomaten-Buttersoße"], "price": "20€" },
+            { "name": "Tavuk Beyti Sarma", "germanName": "Hähnchenfleisch im dünnen Teig (geschnitten)", "content": ["Joghurt", "Pistazien-Tomaten-Buttersoße"], "price": "20€" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sandwich",
+      "name": "Sandwich",
+      "icon": "sandwich",
+      "subtitle": "Fleisch: Klein / Groß",
+      "sections": [
+        {
+          "items": [
+            { "name": "Adana Kebap Sandwich", "germanName": "Lammhackspieß Sandwich", "content": ["Salat"], "price": "7€ / 10€" },
+            { "name": "Tavuk Sis Sandwich", "germanName": "Hähnchenspieß Sandwich", "content": ["Salat"], "price": "7€ / 10€" },
+            { "name": "Köfte Sandwich", "germanName": "Gegrillte Frikadellen Sandwich", "content": ["Salat"], "price": "7€ / 10€" },
+            { "name": "Kuzu Sis Sandwich", "germanName": "Lammspieß Sandwich", "content": ["Salat"], "price": "7€ / 10€" },
+            { "name": "Pommes Sandwich", "germanName": "", "content": ["Salat"], "price": "7€ / 10€" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wrap",
+      "name": "Wrap",
+      "icon": "wrap",
+      "subtitle": "Fleisch: Klein / Groß",
+      "sections": [
+        {
+          "items": [
+            { "name": "Adana Dürüm", "germanName": "Lammhackspieß Wrap", "content": ["Salat"], "price": "7€ / 10€" },
+            { "name": "Tavuk Dürüm", "germanName": "Hähnchenspieß Wrap", "content": ["Salat"], "price": "7€ / 10€" },
+            { "name": "Köfte Dürüm", "germanName": "Gegrillte Frikadellen Wrap", "content": ["Salat"], "price": "7€ / 10€" },
+            { "name": "Kuzu Sis Dürüm", "germanName": "Lammspieß Wrap", "content": ["Salat"], "price": "7€ / 10€" },
+            { "name": "Pommes Dürüm", "germanName": "Pommes Wrap", "content": [], "price": "7€ / 10€" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "teig",
+      "name": "Teig",
+      "icon": "teig",
+      "sections": [
+        {
+          "name": "Pizza",
+          "items": [
+            { "name": "Margherita", "germanName": "", "content": ["Tomatensoße", "Käse"], "price": "7€" },
+            { "name": "Funghi", "germanName": "", "content": ["mit Champignons"], "price": "7€" },
+            { "name": "Chicken", "germanName": "", "content": ["mit Hähnchenfleisch"], "price": "7€" },
+            { "name": "Spinaci", "germanName": "", "content": ["Spinat", "Weichkäse", "Knoblauch"], "price": "7€" },
+            { "name": "Tonno", "germanName": "", "content": ["mit Thunfisch"], "price": "7€" },
+            { "name": "Vegetaria", "germanName": "", "content": ["mit vegetarischem Gemüse"], "price": "7€" },
+            { "name": "Sucuk", "germanName": "", "content": ["mit Knoblauchwurst"], "price": "7€" },
+            { "name": "Salami", "germanName": "", "content": [], "price": "7€" }
+          ]
+        },
+        {
+          "name": "Türkische Pizza & Pide",
+          "items": [
+            { "name": "Lahmacun", "germanName": "Türkische Pizza", "content": [], "price": "7€" },
+            { "name": "Lahmacun Salatali", "germanName": "Türkische Pizza", "content": ["mit Salat"], "price": "7€" },
+            { "name": "Adana Lahmacun", "germanName": "Türkische Pizza", "content": ["mit Lammhackspieß"], "price": "7€" },
+            { "name": "Kasarli Pide", "germanName": "Teigschiffchen Gauda", "content": [], "price": "7€" },
+            { "name": "Kiyamali Pide", "germanName": "Teigschiffchen Hackfleisch", "content": [], "price": "7€" },
+            { "name": "Kiyamali Yumurtali Pide", "germanName": "Teigschiffchen Hackfleisch", "content": ["mit Ei"], "price": "7€" },
+            { "name": "Kasarli Sucuklu Pide", "germanName": "Teigschiffchen Knoblauchwurst", "content": ["mit Guda-Käse"], "price": "7€" },
+            { "name": "Ispanakli Peynirli Pide", "germanName": "Teigschiffchen Spinat", "content": ["mit Weichkäse"], "price": "7€" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "extras",
+      "name": "Extras",
+      "icon": "extras",
+      "sections": [
+        {
+          "name": "Suppe",
+          "items": [
+            { "name": "Mercimek", "germanName": "Linsensuppe", "content": [], "price": "7€" }
+          ]
+        },
+        {
+          "name": "Vorspeisen",
+          "items": [
+            { "name": "Antep Ezme", "germanName": "scharfe Sauce", "content": [], "price": "7€" },
+            { "name": "Cacik", "germanName": "Joghurt mit Knoblauch & Dill", "content": [], "price": "7€" },
+            { "name": "Havuc Ezme", "germanName": "Möhrenpüree", "content": [], "price": "7€" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "drinks",
+      "name": "Drinks",
+      "icon": "drinks",
+      "sections": [
+        {
+          "name": "Kaltgetränke",
+          "layout": "price-list",
+          "items": [
+            { "name": "Cola, Fanta, Sprite, Mezzo Mix", "germanName": "", "content": [], "price": "2,50€" },
+            { "name": "Uludag Gazoz, Eistee", "germanName": "", "content": [], "price": "2,50€" },
+            { "name": "Wasser", "germanName": "", "content": [], "price": "2,00€" },
+            { "name": "Ayran", "germanName": "", "content": [], "price": "2,00€" }
+          ]
+        },
+        {
+          "name": "Heißgetränke",
+          "layout": "price-list",
+          "items": [
+            { "name": "Tee", "germanName": "", "content": [], "price": "1,00€" },
+            { "name": "Kaffee", "germanName": "", "content": [], "price": "1,00€" }
+          ]
+        }
+      ]
+    }
+  ]
+}
